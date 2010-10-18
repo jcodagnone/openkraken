@@ -1,0 +1,12 @@
+ar.com.zauber.labs.kraken.vocabularies.wsg84.Point
+ar.com.zauber.labs.kraken.vocabularies.wsg84.SpatialThing
+ar.com.zauber.labs.kraken.vocabularies.review.Comment
+ar.com.zauber.labs.kraken.vocabularies.review.Feedback
+ar.com.zauber.labs.kraken.vocabularies.review.Review
+ar.com.zauber.labs.kraken.vocabularies.review.modificable.ModificableReview
+ar.com.zauber.labs.kraken.vocabularies.review.Reviewable
+ar.com.zauber.labs.kraken.vocabularies.tagging.RestrictedTagging
+ar.com.zauber.labs.kraken.vocabularies.tagging.Tag
+ar.com.zauber.labs.kraken.vocabularies.tagging.Tagging
+ar.com.zauber.labs.kraken.vocabularies.tagging.modificable.ModificableTag
+ar.com.zauber.labs.kraken.vocabularies.tagging.modificable.ModificableTagging

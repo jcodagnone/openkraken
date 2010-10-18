@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>kraken-open-parent</artifactId>
+        <groupId>ar.com.zauber.labs.kraken</groupId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>kraken-store</artifactId>
+    <packaging>jar</packaging>
+    <name>Zauber Kraken::Store</name>
+    
+    <dependencies>
+      <dependency>
+        <groupId>org.openrdf.alibaba</groupId>
+        <artifactId>alibaba-sail-federation</artifactId>
+        <version>2.0-alpha1</version>
+      </dependency>   
+      <dependency>
+        <groupId>org.openrdf.elmo</groupId>
+        <artifactId>elmo-sesame</artifactId>
+     </dependency>
+     <dependency>
+         <groupId>org.openrdf.sesame</groupId>
+         <artifactId>sesame-sail-nativerdf</artifactId>
+     </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+      </dependency>
+      <dependency>
+	       <groupId>org.openrdf.elmo</groupId>
+	       <artifactId>elmo-smusher</artifactId>
+      </dependency>
+      
+      <!-- TEST -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <artifactId>kraken-vocabularies-location</artifactId>
+        <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+        <version>${pom.version}</version>
+        <scope>test</scope>
+      </dependency>      
+      <dependency>
+        <artifactId>kraken-vocabularies-clublanacion</artifactId>
+        <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+        <version>${pom.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <artifactId>kraken-vocabularies-descuentos</artifactId>
+        <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+        <version>${pom.version}</version>
+        <scope>test</scope>
+      </dependency>
+      
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>ar.com.zauber.labs.kraken.store</Export-Package>
+                        <Bundle-SymbolicName>${pom.groupId}.store</Bundle-SymbolicName>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>        
+    </build>
+</project>

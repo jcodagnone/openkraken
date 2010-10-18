@@ -1,0 +1,8 @@
+ar.com.zauber.labs.kraken.vocabularies.location.BusinessLocation
+ar.com.zauber.labs.kraken.vocabularies.location.Company
+ar.com.zauber.labs.kraken.vocabularies.location.Location
+ar.com.zauber.labs.kraken.vocabularies.location.Industry
+ar.com.zauber.labs.kraken.vocabularies.location.modificable.ModificableBusinessLocation
+ar.com.zauber.labs.kraken.vocabularies.location.modificable.ModificableCompany
+ar.com.zauber.labs.kraken.vocabularies.location.modificable.ModificableIndustry
+ar.com.zauber.labs.kraken.vocabularies.location.modificable.ModificableLocation

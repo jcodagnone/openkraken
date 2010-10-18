@@ -1,0 +1,55 @@
+/**
+ *  Copyright (c) 2009-2010 Zauber S.A.  -- All rights reserved
+ */
+package ar.com.zauber.labs.kraken.vocabularies.wsg84.utils;
+
+import javax.xml.namespace.QName;
+
+import ar.com.zauber.labs.kraken.vocabularies.wsg84.Point;
+import ar.com.zauber.labs.kraken.vocabularies.wsg84.impl.SimplePoint;
+
+/**
+ * TODO Descripcion de la clase. Los comenterios van en castellano.
+ * 
+ * 
+ * @author Juan F. Codagnone
+ * @since Nov 21, 2009
+ */
+public final class WSG84Utils {
+    private static final Geohash GEOHASH = new Geohash();
+    
+    /** Creates the WSG84Utils. */
+    private WSG84Utils() {
+        // utility class
+    }
+    /** @return un qname donde se codifica una posición, latitude */
+    public static QName getQName(final String ns, final double lat, 
+            final double lon) {
+        return new QName(ns, GEOHASH.encode(lat, lon));
+    }
+    
+    /** @return un punto dado un QName que estaba codificado con geohash */
+    public static Point getPoint(final QName name) {
+        double []ret = GEOHASH.decode(name.getLocalPart());
+        return new SimplePoint(ret[0], ret[1]);
+    }
+    
+    /** verify valid longitude domain */
+    public static void validateLongitude(final Double degrees) {
+        if(degrees != null) {
+            if(degrees < -180 || degrees > 180) {
+                throw new IllegalArgumentException(
+                        "longitude must be in [-180;180]");
+            }
+        }
+    }
+    
+    /** verify valid latitude domain */
+    public static void validateLatitude(final Double degrees) {
+        if(degrees != null) {
+            if(degrees < -90 || degrees > 90) {
+                throw new IllegalArgumentException("latitude must be in [-90;90]");
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@prefix loc: <http://kraken.zauber.com.ar/ns/2009/11/location#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://foo/c/Buenos_aires> a loc:location ;
+    dc:title "Buenos Aires" .
+
+<http://foo/c/4ymug9x7nymu> a geo:Point .
+
+<http://foo/c/Buenos_aires> loc:location-geocode <http://foo/c/4ymug9x7nymu> .
+
+<http://foo/c/20-12345678-1> a loc:company ;
+    loc:company-cuit "20-12345678-1" ;
+    dc:title "Acme S.A." .
+
+<http://foo/c/4> a loc:industry ;
+    dc:title "Cerveza" .
+
+<http://foo/c/5> a loc:industry ;
+    dc:title "Papas Fritas" .
+
+<http://foo/c/123> a loc:business-location ;
+    loc:location-address "Armenia 1500" ;
+    loc:business-location-owned-by <http://foo/c/20-12345678-1> ;
+    dc:title "Antares Palermo" ;
+    loc:business-location-primary-industry <http://foo/c/4> ;
+    loc:business-location-secundary-industry <http://foo/c/5> ;
+    loc:location-containedby <http://foo/c/Buenos_aires> .
+
+<http://foo/c/Buenos_aires> loc:location-contains <http://foo/c/123> .

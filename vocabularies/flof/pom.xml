@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+         <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+         <artifactId>kraken-vocabularies-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>kraken-vocabularies-flof</artifactId>
+    <packaging>bundle</packaging>
+    <name>Zauber Kraken::Vocabularies::Flof</name>
+    <description>Fachada de la informacion de flof, sobre rdf</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+            <artifactId>kraken-vocabularies-location</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+            <artifactId>kraken-vocabularies-3rdparty</artifactId>
+            <version>${pom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-dc</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- TEST -->
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-sesame</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>ar.com.zauber.labs.kraken.vocabularies.flof</Export-Package>
+                        <Bundle-SymbolicName>${pom.groupId}.flof</Bundle-SymbolicName>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

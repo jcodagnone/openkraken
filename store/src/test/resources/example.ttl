@@ -1,0 +1,65 @@
+@prefix saliseguro: <http://kraken.zauber.com.ar/ns/2009/11/saliseguro/> .
+
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/1> a saliseguro:businesslocation ;
+	saliseguro:businesslocation-name "Mi Bar" ;
+	saliseguro:businesslocation-id "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/company/20-02910001-8> a saliseguro:company ;
+	saliseguro:company-nombre "Mi comp" ;
+	saliseguro:company-cuit "20-02910001-8" .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/1> saliseguro:businesslocation-owned-by-company <http://kraken.zauber.com.ar/resource/saliseguro/company/20-02910001-8> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/industry/5> a saliseguro:industry ;
+	saliseguro:industry-name "Bares y Cafes" ;
+	saliseguro:industry-id "5"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/1> saliseguro:businesslocation-industry <http://kraken.zauber.com.ar/resource/saliseguro/industry/5> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/0> a saliseguro:habilitationState ;
+	saliseguro:habilitationState-id "0"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	saliseguro:habilitationState-state "Habilitado" ;
+	saliseguro:habilitationState-reasonId "0"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	saliseguro:habilitationState-amount-closures "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/1> saliseguro:businesslocationhabilitationState <http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/0> ;
+	saliseguro:location-address "Barzana 1212" ;
+	saliseguro:location-block "2" ;
+	saliseguro:location-section "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	saliseguro:location-lot "ses" ;
+	saliseguro:location-doorCode "1212"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/2> a saliseguro:businesslocation ;
+	saliseguro:businesslocation-name "Tu Bar" ;
+	saliseguro:businesslocation-id "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	saliseguro:businesslocation-owned-by-company <http://kraken.zauber.com.ar/resource/saliseguro/company/20-02910001-8> ;
+	saliseguro:businesslocation-industry <http://kraken.zauber.com.ar/resource/saliseguro/industry/5> ;
+	saliseguro:businesslocationhabilitationState <http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/0> ;
+	saliseguro:location-address "Barzana 12" ;
+	saliseguro:location-block "2" ;
+	saliseguro:location-section "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	saliseguro:location-lot "ses" ;
+	saliseguro:location-doorCode "1212"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/3> a saliseguro:businesslocation ;
+	saliseguro:businesslocation-name "El boliche" ;
+	saliseguro:businesslocation-id "3"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/company/20-02910002-3> a saliseguro:company ;
+	saliseguro:company-nombre "Boliche" ;
+	saliseguro:company-cuit "20-02910002-3" .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/3> saliseguro:businesslocation-owned-by-company <http://kraken.zauber.com.ar/resource/saliseguro/company/20-02910002-3> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/industry/1> a saliseguro:industry ;
+	saliseguro:industry-name "Boliche" ;
+	saliseguro:industry-id "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/3> saliseguro:businesslocation-industry <http://kraken.zauber.com.ar/resource/saliseguro/industry/1> ;
+	saliseguro:businesslocationhabilitationState <http://kraken.zauber.com.ar/resource/saliseguro/businesslocation/0> ;
+	saliseguro:location-address "Barzana 1332" ;
+	saliseguro:location-block "2" ;
+	saliseguro:location-section "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	saliseguro:location-lot "ses" ;
+	saliseguro:location-doorCode "1212"^^<http://www.w3.org/2001/XMLSchema#int> .

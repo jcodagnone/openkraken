@@ -1,0 +1,8 @@
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.BuenosAiresLocation
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.BusinessClosureCode
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.HabilitationState
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.SaliSeguroLocation
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.modificable.ModificableBuenosAiresLocation
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.modificable.ModificableBusinessClosure
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.modificable.ModificableHabilitationState
+ar.com.zauber.labs.kraken.vocabularies.buenosaires.model.modificable.ModificableSaliSeguroLocation

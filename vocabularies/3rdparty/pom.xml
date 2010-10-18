@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+         <groupId>ar.com.zauber.labs.kraken.vocabularies</groupId>
+         <artifactId>kraken-vocabularies-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>kraken-vocabularies-3rdparty</artifactId>
+    <packaging>bundle</packaging>
+    <name>Zauber Kraken::Vocabularies::3rdParty</name>
+
+    <dependencies> 
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-foaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-skos</artifactId>
+            <version>${elmo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-rdfs</artifactId>
+            <version>${elmo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openrdf.elmo</groupId>
+            <artifactId>elmo-sesame</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>ar.com.zauber.labs.kraken.vocabularies.3rdparty</Export-Package>
+                        <Bundle-SymbolicName>${pom.groupId}.3rdparty</Bundle-SymbolicName>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
