@@ -21,6 +21,7 @@ import org.openrdf.concepts.foaf.Image;
 import org.openrdf.elmo.annotations.rdf;
 
 import ar.com.zauber.labs.kraken.vocabularies.location.Location;
+import ar.com.zauber.labs.kraken.vocabularies.location.LocationNamespaceUtils;
 import ar.com.zauber.labs.kraken.vocabularies.review.Reviewable;
 import ar.com.zauber.labs.kraken.vocabularies.tagging.Tageable;
 
@@ -30,6 +31,7 @@ import ar.com.zauber.labs.kraken.vocabularies.tagging.Tageable;
  * @author Juan F. Codagnone
  * @since Dec 4, 2009
  */
+@rdf(LocationNamespaceUtils.TYPE_FLOF_PLACE)
 public interface FlofPlace extends Location, Reviewable, Tageable {
 
     /** the place depictions */

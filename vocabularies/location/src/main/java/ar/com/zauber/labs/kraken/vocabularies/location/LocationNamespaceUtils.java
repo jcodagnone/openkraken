@@ -41,6 +41,9 @@ public interface LocationNamespaceUtils {
     /** @see Location */
     String TYPE_LOCATION = NS_LOCATION_BASE + "location";
 
+    /** @see Flof Location */
+    String TYPE_FLOF_PLACE = NS_LOCATION_BASE + "flof-location";
+    
     /** @see Location#getGeoLocation()*/
     String LOCATION_GEOLOCATION = TYPE_LOCATION + "-geocode";
     /** @see Location#getContains() */
